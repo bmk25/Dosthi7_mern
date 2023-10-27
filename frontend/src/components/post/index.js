@@ -27,6 +27,7 @@ export default function Post({ post, user, profile }) {
   const [count, setCount] = useState(1);
   const [comments, setComments] = useState([]);
 
+  console.log(comments)
   useEffect(() => {
     getPostReacts();
   }, [post]);
@@ -220,8 +221,8 @@ export default function Post({ post, user, profile }) {
           <div className="reacts_count_num">{total > 0 && total}</div>
         </div>
         <div className="to_right">
-          <div className="comments_count">13 comments</div>
-          <div className="share_count">1 share</div>
+          <div className="comments_count">{comments.length} comments</div>
+          {/* <div className="share_count">1 share</div> */}
         </div>
       </div>
 
