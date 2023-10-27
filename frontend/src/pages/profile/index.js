@@ -13,7 +13,7 @@ import Post from "../../components/post";
 import Photos from "./Photos";
 import Intro from "../../components/intro/Index";
 import { useMediaQuery } from "react-responsive";
-export default function Profile({ setVisible }) {
+export default function Profile() {
   const { username } = useParams();
   const navigate = useNavigate();
   const { user } = useSelector((state) => ({ ...state }));
