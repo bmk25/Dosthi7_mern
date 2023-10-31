@@ -11,6 +11,7 @@ import PostError from "./PostError";
 import dataURItoBlob from "../../helpers/dataURItoBlob";
 import { uploadImages } from "../../functions/uploadImages";
 import DangerousIcon from "@mui/icons-material/Dangerous";
+import AddToYourPost from "./AddToYourPost";
 export default function CreatePostPopup({ user, setVisible }) {
   const dispatch = useDispatch();
   const popup = useRef(null);
@@ -139,17 +140,8 @@ export default function CreatePostPopup({ user, setVisible }) {
             setError={setError}
           />
         )}
-        <div className="addtoyourpost">
-          <div
-            className="addto_text"
-            onClick={() => {
-              setShowPrev(true);
-            }}
-          >
-            <span>Add Images </span>
-            <PhotoSizeSelectActualIcon />
-          </div>
-        </div>{" "}
+      <AddToYourPost setShowPrev={setShowPrev} />
+
         <button
           className="post_submit"
           onClick={() => {

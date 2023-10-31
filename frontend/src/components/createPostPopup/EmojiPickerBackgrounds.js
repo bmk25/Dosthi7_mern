@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Picker from "emoji-picker-react";
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+
 
 export default function EmojiPickerBackgrounds({
   text,
@@ -107,12 +109,16 @@ export default function EmojiPickerBackgrounds({
           </div>
         )}
 
-        <i
+        {/* <i
           className={`emoji_icon_large ${type2 ? "moveleft" : ""}`}
           onClick={() => {
             setPicker((prev) => !prev);
           }}
-        ></i>
+
+        ></i> */}
+         <InsertEmoticonIcon onClick={() => {
+            setPicker((prev) => !prev);
+          }}/> 
       </div>
     </div>
   );
