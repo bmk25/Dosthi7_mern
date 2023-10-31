@@ -65,7 +65,7 @@ function App() {
         />
         <Route
           path="/profile/:username"
-          element={<Profile  />}
+          element={<Profile />}
           exact
         />
           <Route
