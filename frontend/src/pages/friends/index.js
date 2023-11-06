@@ -6,7 +6,7 @@ import { friendspage } from "../../functions/reducers";
 import { getFriendsPageInfos } from "../../functions/user";
 import Card from "./Card";
 import "./style.css";
-export default function Friends() {
+export default function Friends({setVisible}) {
   const { user } = useSelector((state) => ({ ...state }));
   const { type } = useParams();
 

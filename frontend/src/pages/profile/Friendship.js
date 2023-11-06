@@ -13,6 +13,8 @@ import {
 import PersonAddRoundedIcon from '@mui/icons-material/PersonAddRounded';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
 import LoupeIcon from '@mui/icons-material/Loupe';
+import PeopleIcon from '@mui/icons-material/People';
+import PersonIcon from '@mui/icons-material/Person';
 
 export default function Friendship({ friendshipp, profileid }) {
   const [friendship, setFriendship] = useState(friendshipp);
@@ -78,7 +80,7 @@ export default function Friendship({ friendshipp, profileid }) {
       {friendship?.friends ? (
         <div className="friends_menu_wrap">
           <button className="gray_btn" onClick={() => setFriendsMenu(true)}>
-            <img src="../../../icons/friends.png" alt="" />
+            <PeopleIcon/>
             <span>Friends</span>
           </button>
           {friendsMenu && (
@@ -126,7 +128,7 @@ export default function Friendship({ friendshipp, profileid }) {
         friendship?.requestReceived && (
           <div className="friends_menu_wrap">
             <button className="gray_btn" onClick={() => setRespondMenu(true)}>
-              <img src="../../../icons/friends.png" alt="" />
+              <PersonIcon/>
               <span>Respond</span>
             </button>
             {respondMenu && (

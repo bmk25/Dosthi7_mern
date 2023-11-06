@@ -60,12 +60,12 @@ function App() {
       <Route element={<LoggedInRoutes />}>
         <Route
           path="/profile"
-          element={<Profile />}
+          element={<Profile setVisible={setVisible} />}
           exact
         />
         <Route
           path="/profile/:username"
-          element={<Profile />}
+          element={<Profile setVisible={setVisible} />}
           exact
         />
           <Route
@@ -94,6 +94,7 @@ function App() {
           element={<Home setVisible={setVisible} posts={posts} />}
           exact
         />
+        {/* <Route path="/activate/:token" element={<Activate />} exact /> */}
       </Route>
       <Route path="/reset" element={<Reset />} />
     </Routes>

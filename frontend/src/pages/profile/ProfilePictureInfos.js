@@ -13,6 +13,7 @@ export default function ProfilePictureInfos({
 }) {
   const [show, setShow] = useState(false);
   const pRef = useRef(null);
+  console.log(profile)
   return (
     <div className="profile_img_wrap">
       {show && <ProfilePicture setShow={setShow} pRef={pRef} photos={photos} />}

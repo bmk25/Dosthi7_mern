@@ -6,7 +6,7 @@ exports.authUser = (req, res, next) => {
         if (!token) {
             return res.status(400).json({ message: "Invalid Authentifiation" })
         }
-        jwt.verify(token, process.env.TOKEN_SCRECT, (err, user) => {
+        jwt.verify(token, "secretkey", (err, user) => {
             if (err) {
                 return res.status(400).json({ message: "Invalid Authentification" })
             }
